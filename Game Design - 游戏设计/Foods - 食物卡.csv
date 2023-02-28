@@ -1,0 +1,95 @@
+﻿foodNum,foodNameCN,foodNameEN,foodFeatureCN,foodFeatureEN,foodExplanationCN,foodExplanationEN
+FD01,毒马铃薯,Poisonous Potato,"+2/+5；
+为自己施加 中毒I
+烹调：战斗外使用的效果等同于同类熟食","+2/+5；
+Receive Poison I;
+Cooking: See as the cooked one outside the battle ",以毒攻毒,Fight poison with poison
+FD02,苹果,Apple,+3,+3,医生也许可以远离我！,Stay away from me doc!
+FD03,胡萝卜,Carrot,+3,+3,多汁香甜,Juicy and sweet
+FD04,熟鳕鱼,Cooked Cod,+5,+5,深海的香味,Fragrance from the deep sea
+FD05,熟兔肉,Cooked Rabbit,+5,+5,希望不是宠物兔…,"Please, not a pet rabbit!"
+FD06,面包,Bread,+5,+5,简单又经典,Simple and classic
+FD07,烤马铃薯,Baked Potato,+5,+5,慢着点！这可不是烫手山芋,Not a hot potato!
+FD08,甜菜汤,Beetroot Soup,+6,+6,冬日的一点热量,A little heat in winter
+FD09,熟鸡肉,Cooked Chicken,+6,+6,除了分量都很好,"Everything's good, except the weight"
+FD10,蘑菇煲,Mushroom Stew,+6,+6,无限量供应！,Unlimited supply!
+FD11,熟羊肉,Cooked Mutton,+7,+7,没什么膻味,No smell of mutton
+FD12,熟鲑鱼,Cooked Salmon,+7,+7,可能需要一点调味料…,"Ever heard something called ""salt""?"
+FD13,南瓜派,Pumpkin Pie,+7,+7,香甜又管饱,Luscious and hunger-resisting
+FD14,兔肉煲,Rabbit Stew,+8,+8,兔兔那么可爱，为什么要…真香！,Cute and yummy
+FD15,熟猪排,Cooked Porkchop,+9,+9,汁水外溢,Juicy overflow!!
+FD16,牛排,Steak,+9,+9,高蛋白的选择,High protein
+FD17,蛋糕,Cake,+12,+12,蛋糕是个谎言！,Cake is a lie!
+FD18,甜浆果,Sweet Berries,"+1；
+辅菜：战斗外，可将此牌当手中的另一张食物牌打出（需展示），回血效果减半（↑）","+1；
+Side Dish: Outside the battle, seeing it as half of the other one when using this and another food card at the same time (↑)",酸甜配菜,Multi-flavoring
+FD19,甜菜根,Beetroot,"+1；
+辅菜：战斗外，可将此牌当手中的另一张食物牌打出（需展示），回血效果减半（↑）","+1；
+Side Dish: Outside the battle, seeing it as half of the other one when using this and another food card at the same time (↑)",给生活加点红色,Redish to life
+FD20,发光浆果,Glow Berries,"+1；
+辅菜：战斗外，可将此牌当手中的另一张食物牌打出（需展示），回血效果减半（↑）","+1；
+Side Dish: Outside the battle, seeing it as half of the other one when using this and another food card at the same time (↑)",给生活加点荧光,Fluorescence to life
+FD21,热带鱼,Golden Fish,"+2；
+辅菜：战斗外，可将此牌当手中的另一张食物牌打出（需展示），回血效果减半（↑）","+2；
+Side Dish: Outside the battle, seeing it as half of the other one when using this and another food card at the same time (↑)",仅供观赏…?,For viewing only?
+FD22,干海带,Dried Kelp,"+1；
+快速行动：战斗中使用不消耗回合","+1；
+Quick acting: Next act in battle won't consume any turn",海的味道,Taste of the sea
+FD23,河豚,Pufferfish,+13，结束阶段-11，非致命,"+13, but -11 when the turn ends, non-lethal",小心处理…,Handle with care
+FD24,生鳕鱼,Raw Cod,"+2/+5；
+烹调：战斗外使用的效果等同于同类熟食","+2/+5；
+Cooking: See as the cooked one outside the battle ",还是烤一烤吧…,Better to bake…
+FD25,生兔肉,Raw Rabbit,"+2/+5；
+烹调：战斗外使用的效果等同于同类熟食","+2/+5；
+Cooking: See as the cooked one outside the battle ",还是烤一烤吧…,Better to bake…
+FD26,马铃薯,Potato,"+2/+5；
+烹调：战斗外使用的效果等同于同类熟食","+2/+5；
+Cooking: See as the cooked one outside the battle ",最好能找到个营火,Better find a campfire
+FD27,生鸡肉,Raw Chicken,"+2/+6；
+烹调：战斗外使用的效果等同于同类熟食","+2/+6；
+Cooking: See as the cooked one outside the battle ",还是烤一烤吧…,Better to bake…
+FD28,生羊肉,Raw Mutton,"+2/+7；
+烹调：战斗外使用的效果等同于同类熟食","+2/+7；
+Cooking: See as the cooked one outside the battle ",还是烤一烤吧…,Better to bake…
+FD29,生鲑鱼,Raw Salmon,"+2/+7；
+烹调：战斗外使用的效果等同于同类熟食","+2/+7；
+Cooking: See as the cooked one outside the battle ",还是烤一烤吧…,Better to bake…
+FD30,生猪排,Raw Porkchop,"+2/+9；
+烹调：战斗外使用的效果等同于同类熟食","+2/+9；
+Cooking: See as the cooked one outside the battle ",还是烤一烤吧…,Better to bake…
+FD31,生牛肉,Raw Beef,"+2/+9；
+烹调：战斗外使用的效果等同于同类熟食","+2/+9；
+Cooking: See as the cooked one outside the battle ",还是烤一烤吧…,Better to bake…
+FD32,西瓜片,Melon Slice,"+2；
+快速行动：战斗中使用不消耗回合","+2；
+Quick acting: Next act in battle won't consume any turn",解暑好选择,Relieving the summer
+FD33,曲奇,Cookie,"+2；
+快速行动：战斗中使用不消耗回合","+2；
+Quick acting: Next act in battle won't consume any turn",怎么吃都不够！,Always not enough!
+FD34,紫颂果,Chorus Fruit,"+3；
+折跃：传送至随机一名玩家身边2格的地方（方向四向随机）","+3；
+折跃：传送至随机一名玩家身边2格的地方（方向四向随机）",如鬼一样穿梭,Shuttling like a ghost
+FD35,金苹果,Golden Apple,"+4；
+获得伤害吸收II","+4；
+Receive Absroption II",安心,Reassurance
+FD36,附魔金苹果,Enchanted Golden Apple,"+4；
+获得伤害吸收II；获得4点临时血量","+4；
+Receive Absroption II; Receive 4 Temporary HP",绝对的安心,Absolutely reassurance
+FD37,蜂蜜瓶,Honey Bottle,"+4；
+祛毒：清除身上的中毒效果","+4；
+Detoxification: Remove any poison effect that had received",我的蜂蜜去哪了？,Where's my honey?
+FD38,金胡萝卜,Golden Carrot,"+6；
+获得伤害吸收I","+6；
+Receive Absroption I",金光熠熠,It's glowing!
+FD39,迷之炖菜,Suspicious Stew,"+6；
+使用后判定：1~6 - 分别对应防火I/凋零I/中毒I/生命恢复I/瞬间治疗I/虚弱I","+6；
+Judge: 1~6 - Fire Resistance I/ Wither I/Poison I/ Regeneration I/ Instant Health I/ Weakness I",看起来就很一言难尽…,Hard to say…
+FD40,牛奶,Milk Bucket,"净化：清除身上的负面效果；
+获得 抗性提升I","Purification: Remove any debuff that had received;
+Receive Resistance",可为什么牛会中毒呢？,But why they can be poisoned?
+FD41,蜘蛛眼,Spider Eye,"净化：清除身上的负面效果；
+获得 中毒I","Purification: Remove any debuff that had received;
+Receive Poison I",以毒攻毒,Fight poison with poison
+FD42,腐肉,Rotten Flesh,"判定：1~5 - +2；
+6 - +4","Judge：1~5 - +1；
+6 - +4",比没吃的好,Better than nothing
