@@ -114,21 +114,10 @@ V1.1β(内部版)
 
 （1）「装备牌」会为玩家提供强力的火力与防护，分为主，副武器与防具牌三种。
 放在对应的装备区以宣告装备，新的装备会顶弃掉先前的装备。
-
-<img src="H:\MinecraftBoardGame\游戏说明\Pics\横版_武器卡_原型-1677256879215-22.png" alt="横版_武器卡_原型" style="zoom:50%;" />
-
-<img src="H:\MinecraftBoardGame\游戏说明\Pics\横版_防具卡_原型.png" alt="横版_防具卡_原型" style="zoom:50%;" />
-
 （2）「伙伴牌」可以为玩家解锁更多强力的玩法，且不会被他人夺取。
 放在对应的伙伴区以宣告装备，新的伙伴会顶弃掉先前的伙伴。
-
-<img src="H:\MinecraftBoardGame\游戏说明\Pics\横版_伙伴卡_原型-1677256911386-25.png" alt="横版_伙伴卡_原型" style="zoom:50%;" />
-
 （3）「事件牌」包含各式各样的随机事件，可能会对战局造成不可思议的影响。
 每张事件牌都有特殊的效果，有财宝，也有危险！
-
-<img src="H:\MinecraftBoardGame\游戏说明\Pics\横版_事件卡_原型-1677256911386-26.png" alt="横版_事件卡_原型" style="zoom:50%;" />
-
 
 #### 手牌
 手牌包含「道具牌」与「食物牌」，均为竖版牌。这些卡牌不对其他玩家展示。
@@ -141,13 +130,10 @@ V1.1β(内部版)
 3.【药水】「决策阶段」或战斗中打出，给自己或其他玩家施加多种效果迥异的Buff。
 「决策阶段」可以打出任意数量符合要求的道具牌，而战斗中使用则需占用1个战斗回合。
 
-<img src="H:\MinecraftBoardGame\游戏说明\Pics\竖版_道具卡_原型-1677256911386-27.png" alt="竖版_道具卡_原型" style="zoom:50%;" />
 
 （2）「食物牌」能帮助玩家快速补充状态。
 不同的食物可能有不同的效果，不是所有的食物牌都有正面效果。
 「决策阶段」可以打出任意数量符合要求的食物牌，而战斗中使用则需占用1个战斗回合。
-
-<img src="H:\MinecraftBoardGame\游戏说明\Pics\竖版_食物卡_原型-1677256911386-28.png" alt="竖版_食物卡_原型" style="zoom:50%;" />
 
 #### 角色牌
 
@@ -198,11 +184,8 @@ V1.1β(内部版)
 
 #### 玩家状态栏
 
-<img src="H:\MinecraftBoardGame\游戏说明\Pics\PlayerStatus(New_300ppi_25.6cm_12.8cm)-1677256911386-29.png" alt="PlayerStatus(New_300ppi_25.6cm_12.8cm)" style="zoom:24%;" />
 
 #### 游戏状态栏
-
-<img src="H:\MinecraftBoardGame\Concepts\V1.0β\Instantiation\CMYK\GameStatus.png" alt="GameStatus" style="zoom:25%;" />
 
 
 
