@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>Instruction - 游戏说明</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p><span>《我的冒险》(MineVenture)游戏说明</span>
+<span>V1.3β(内部版)</span></p><p><span>Producer: albertoBradish</span>
+<span>CodeName: Starissimo</span>
+<span>此版美术资源与玩法说明仍在测试阶段，不代表最终品质。</span></p><p>&nbsp;</p><h2 id='游戏简介'><span>游戏简介</span></h2><p><span>《我的冒险》是一款节奏适中，适合与朋友一同游玩的开放桌面对战游戏。</span>
+<span>击杀其他所有玩家，或者是一同击败世界BOSS，完成各式各样的任务。</span>
+<span>游戏玩法多样，地图极富创造性，还原原汁原味的原版游戏流程。</span>
+<span>无论是合作还是博弈，大量有趣的卡牌都能锻造出一场独一无二、策略满满的对局！</span></p><h4 id='游戏资源'><span>游戏资源</span></h4><p><span>请您优先清点包装盒内的内容，一份完整的游戏包含如下内容：</span>
+<span>角色卡 x6; BOSS卡 x1; 耐久值 x45; 血量(5HP) x30; 血量(1HP) x28; 小组件 x43; 六面骰子 x2；角色头颅 x6; 地图块 x5; 玩家状态栏 x6; 游戏状态栏 x1; 时间指示器 x6; 游戏卡牌 x193。</span>
+<span>清点完毕后，方可开始准备游戏。</span></p><h4 id='游戏准备'><span>游戏准备</span></h4><p><span>（1）拼好要用到的游戏地图，依游玩人数插上「玩家状态栏」，将牌分类后洗混，作为各个牌堆。</span>
+<span>（2）把「游戏状态栏」插入地图，将天数归零，时间调至白天。</span>
+<span>（3）每位玩家按照座位逆时针的顺序选择出生点，并将自己的角色头颅置于对应出生点上。</span>
+<span>（4）每名玩家按序摸1张「装备牌」放入装备区，2张「道具牌」收至手中。</span></p><h4 id='游戏流程'><span>游戏流程</span></h4><p><span>游戏开始后，每个轮次（每个时间）按照以下顺序进行：</span>
+<span>（1）「行动阶段」玩家投出骰子并进行二向移动，并摸取脚下地块上指示的卡牌。</span>
+<span>（2）「决策阶段」玩家可以使用自己的手牌，或对其他玩家发起战斗。</span>
+<span>（3）「结束阶段」玩家宣布自己的回合结束，并弃牌）。</span></p><h4 id='胜利条件'><span>胜利条件</span></h4><p><span>独自或与其他玩家一同击败世界BOSS「末影龙」即可赢得胜利。</span>
+<span>场上只剩一名玩家的时候，此玩家也可以获得胜利。</span></p><p>&nbsp;</p><h2 id='轮次流程'><span>轮次流程</span></h2><p><span>每个轮次（昼夜算一天，两轮）按照「行动阶段」「决策阶段」和「结束阶段」顺序进行。</span></p><h4 id='行动阶段'><span>行动阶段</span></h4><p><span>每轮中，玩家依次选择一项执行：</span>
+<span>1.选择跳过行动阶段，直接进入决策阶段；</span>
+<span>2.投出1次骰子，根据投出的点数，结合地块特殊效果（详见地图说明）进行移动。</span>
+<span>单次移动中，只能选择两个不相反的方向移动，移动不可中途停止，但可以对路径上的玩家宣战。</span>
+<span>3.跳过行动与决策阶段，在下轮开始时传送至传送点（默认为出生点）</span>
+<span>两个玩家停在一起时，后来的玩家不可获取地块奖励。</span></p><h4 id='决策阶段'><span>决策阶段</span></h4><p><span>玩家在移动停止后，可以选择：</span>
+<span>1.【使用手牌】使用手中任意数量，符合要求的手牌；</span>
+<span>2.【发起战斗】对攻击范围内的任意一位玩家宣战；</span>
+<span>3.【宣布结束】宣布进入「结束阶段」。</span></p><h4 id='结束阶段'><span>结束阶段</span></h4><p><span>在玩家宣布结束自己的决策阶段后，进入「结束阶段」。</span>
+<span>玩家需要在此时将自己的手牌弃置至手牌上限（默认为4张），并结算场上部分卡牌的效果。</span>
+<span>当所有玩家都结束了他们的「结束阶段」后，游戏时间向后推进半天，游戏进入新的一轮！</span></p><h4 id='自然回血突然死亡'><span>自然回血&amp;突然死亡</span></h4><p><span>每天结束后，所有玩家自然回复2点血量。</span>
+<span>当场上存在「剧情事件牌」或游戏天数超过5天时，每轮结束时所有在主世界且未造成击杀的玩家受到【正比于死亡玩家数+3】的真实伤害。</span></p><p>&nbsp;</p><h2 id='卡牌介绍'><span>卡牌介绍</span></h2><p><span>游戏中有多种多样的卡牌，每张卡牌都有截然不同的效果。</span>
+<span>这些卡牌上的词条均大于游戏设定的优先级，同时部分卡牌可能会与游戏附赠的角标绑定。</span></p><h4 id='场地牌'><span>场地牌</span></h4><p><span>场地牌包含「装备牌」「伙伴牌」与「事件牌」，均为横版牌。这些卡牌应当对全场展示。</span>
+<span>此类牌不进入弃牌堆，弃牌后回到牌堆底。</span></p><p><span>（1）「装备牌」会为玩家提供强力的火力与防护，分为主，副武器与防具牌三种。</span>
+<span>放在对应的装备区以宣告装备，新的装备会顶弃掉先前的装备。</span></p><p><span>（2）「伙伴牌」可以为玩家解锁更多强力的玩法，且不会被他人夺取。</span>
+<span>放在对应的伙伴区以宣告装备，新的伙伴会顶弃掉先前的伙伴。</span></p><p><span>（3）「事件牌」包含各式各样的随机事件，可能会对战局造成不可思议的影响。</span>
+<span>每张事件牌都有特殊的效果，有财宝，也有危险！</span></p><p>&nbsp;</p><h4 id='手牌'><span>手牌</span></h4><p><span>手牌包含「道具牌」与「食物牌」，均为竖版牌。这些卡牌不对其他玩家展示。</span>
+<span>此类牌打出后进入弃牌堆，场上没有可抽手牌后洗牌进入新的轮换。</span></p><p><span>（1）「道具牌」能让玩家短期大量提升实力，部分卡牌与地图角标绑定（详见卡牌右上角标识）。</span>
+<span>分为消耗品，附魔书与药水三种：</span>
+<span>1.【消耗品】「决策阶段」或战斗中打出，结算效果后作废；</span>
+<span>2.【附魔书】附着在对应武器之下，一件武器可以同时装备多种不同类的附魔书；</span>
+<span>3.【药水】「决策阶段」或战斗中打出，给自己或其他玩家施加多种效果迥异的Buff。</span>
+<span>「决策阶段」可以打出任意数量符合要求的道具牌，而战斗中使用则需占用1个战斗回合。</span></p><p><span>（2）「食物牌」能帮助玩家快速补充状态。</span>
+<span>不同的食物可能有不同的效果，不是所有的食物牌都有正面效果。</span>
+<span>「决策阶段」可以打出任意数量符合要求的食物牌，而战斗中使用则需占用1个战斗回合。</span></p><h4 id='角色牌'><span>角色牌</span></h4><p><span>角色牌包含各种各样形貌各异的的角色，与示意玩家位置的头颅绑定，指代玩家。</span>
+<span>此类牌需在游戏开始前选择好并放置至「玩家状态栏」的角色栏位。</span>
+<span>除去游戏附赠的卡牌，玩家还可以自定义属于自己的角色牌（详见【网站链接】）。</span></p><h4 id='传说牌'><span>传说牌</span></h4><p><span>游戏中还包含一些特殊的「传说牌」，这些卡牌非常少，但都有着强力的效果，只能从「事件卡」中抽到。</span>
+<span>传说牌判定上算入「场地牌」「手牌」之中。</span></p><p>&nbsp;</p><h2 id='玩家状态'><span>玩家状态</span></h2><p><span>每名玩家都有独属于自己的状态栏，以下是参数详解：</span></p><h4 id='血量'><span>血量</span></h4><p><span>每名玩家在开局时均有20血量，当玩家血量降至0及以下时，玩家宣告死亡。</span></p><h4 id='耐久'><span>耐久</span></h4><p><span>每件武器都有其对应的耐久，耐久耗尽后武器损毁，进入弃牌堆。</span></p><h4 id='伤害'><span>伤害</span></h4><p><span>游戏中有四种伤害类型：</span>
+<span>（1）【物理伤害】默认伤害，可被护甲与Buff抵消</span>
+<span>（2）【穿透伤害】不可被护甲与Buff抵消，但可被阻挡</span>
+<span>（3）【真实伤害】无伤害来源，不可被抵消或阻挡</span>
+<span>（4）【范围伤害】与物理与穿透伤害不互斥，可被对应特性抵消。</span></p><h4 id='效果'><span>效果</span></h4><p><span>每个玩家都有三个效果（Buff）槽位，获得新Buff时，优先选择空槽放入；</span>
+<span>当没有槽位可装时，新的效果会顶替掉最先获取的效果。</span></p><p>&nbsp;</p><h2 id='战斗流程'><span>战斗流程</span></h2><p><span>玩家可以在「行动阶段」或「决策阶段」向攻击范围内的玩家宣战，每场战斗至多持续3回合。</span>
+<span>每回合按照「准备阶段」「结算阶段」顺序进行。</span>
+<span>宣战时，若被宣战玩家攻击范围内没有宣战玩家，则战斗进入「伏击回合」：宣战玩家单独进行计算距离（玩家之间X，Y轴的距离之和）的攻击，被宣战玩家无法主动响应。</span></p><p><span>后面的每一回合，均以此流程进行：</span></p><h4 id='准备阶段'><span>准备阶段</span></h4><p><span>宣战方先宣读自己的行动，随后被宣战方宣读，可用行动如下： </span>
+<span>1.【使用主武器】使用主武器进行攻击</span>
+<span>2.【使用副武器】使用副武器进行攻击</span>
+<span>3.【使用手牌】使用手中一张可用的手牌</span>
+<span>4.【逃跑】每轮限1次，立即投出1次骰子，且点数-1（最低至1）；</span>
+<span>若投出的点数大于对方攻击范围，则逃跑成功，立即脱战，并进入自己此轮的「结束阶段」。</span>
+<span>双方距离默认为0，但若战斗中发生了位移，则以位移后的距离为准。</span></p><h4 id='结算阶段'><span>结算阶段</span></h4><p><span>双方同时结算受到的伤害与特效，每次伤害独立计算。</span>
+<span>玩家宣告死亡时，对方获得其所有手牌及任意一张「装备牌」。</span></p><p><span>战斗结束后，宣战玩家立即进入「结束阶段」，游戏继续。</span></p><p>&nbsp;</p><h2 id='实例对照'><span>实例对照</span></h2><p><span>以下是游戏实体中，不同游玩区域的介绍，可以让人快速上手。</span></p><h4 id='游戏地图'><span>游戏地图</span></h4><p><span>游戏有两种地图：24x24与32x32，分别对应3-4人与4-6人游玩。</span>
+<span>玩家可以任意拼装游戏的地图块，也可以自行设计自己的地图块，详见【网站链接】。</span>
+<span>一份地图上有各式各样的地块，详见附赠的「地图信息卡」。</span></p><h4 id='玩家状态栏'><span>玩家状态栏</span></h4><p><span>（略）</span></p><h4 id='游戏状态栏'><span>游戏状态栏</span></h4><p><span>（略）</span></p><h2 id='其他词条'><span>其他词条</span></h2><p><span>以下是《我的冒险》中的其他独立词条，用以参考。</span></p><h4 id='数值取整'><span>数值取整</span></h4><p><span>游戏中的所有数字都为整数，对于小数请参见卡牌上的标识，其中：</span>
+<span>「↑」指向上取整；</span>
+<span>「↓」指向下取整。</span></p><h4 id='神之右手'><span>神之右手...</span></h4><p><span>玩家的武器槽为空时，可以使用空手进行攻击，伤害为2点，不计耐久。</span></p><h4 id='buff与词条列表'><span>Buff与词条列表</span></h4><p><span>详见【网址链接】。</span></p><p>&nbsp;</p></div></div>
+</body>
+</html>
